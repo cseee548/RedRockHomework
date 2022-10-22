@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+       #主体
+       {
+        width: 435px; ;
+        height: 660px; ;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        margin: auto;
+        top: 0%;
+        bottom: 0%;
+        left: 0%;
+        right: 0%;
+        border: 1px solid;
+
+       }
+       #logo
+       {
+        position: relative;
+        width: 20%;
+        left: 38%;
+        top:10%;
+       }
+       #table
+       {
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top:30%;
+        border: 1px solid #999;
+        border-radius: 5px;
+        width: 70%;
+        height: 18%;
+        border-spacing: 0px;
+        margin-bottom: 10px;
+        
+       }
+       .自动登录
+       {
+        background-color: antiquewhite;
+        width: 70%;
+        height: auto;
+
+       }
+       #电话头
+       {
+        width:35% ;
+        height: 50%;
+        float: left;
+        border-top-left-radius: 5px ;
+        background-color: rgb(255, 255, 255);
+        border-bottom: 1px solid #999;
+        border-right: 1px solid #999;
+       }
+       #账号
+       {
+        width:65% ;
+        height:50%;
+        float:right;
+        border-top-right-radius: 5px;
+        border-bottom: 1px solid #999;
+        margin-left: -1px;
+        
+       }
+       #密码
+       {
+        height:50% ;
+        clear: both;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+       }
+       #账号1
+       {
+        width:188px ;
+        height:100%;
+        border: 0px;
+        padding: 0px;
+        border-right: 1px solid #999;
+        border-top-right-radius: 5px;
+        left: 10px;
+        position: relative;
+        color: #999;
+        font-size: 18px;
+       }
+       #密码1
+       {
+        width:258px ;
+        height:58px;
+        border: 0px;
+        padding: 0px;
+        border-right: 1px solid #999;
+        border-bottom-right-radius: 5px;
+        left: 5px;
+        position: relative;
+        color: #999;
+        font-size: 18px;
+        
+       }
+       #登录按钮
+       {
+        background-color: red;
+        width: 70%;
+        height: 45px;
+        position: absolute;
+        top:63%;
+        margin: auto;
+        left: 0%;
+        right: 0%;
+        border: 0px;
+        border-radius: 6px;
+       }
+       #注册
+       {
+        position: absolute;
+        text-align: center;
+        top: 73%;
+        left: 39%;
+        right: 40%;
+        margin: auto;
+        color: black;
+
+       }
+       #图标
+       {
+        width: 70%;
+        height: 40px;
+        position: absolute;
+        top: 80%;
+        left: 15%;
+       }
+       .图标1
+       {
+        width: 40px;
+        height: 40px;
+        margin-left: 20px;
+        margin-right: 10px;
+       }
+       #协议
+       {
+        width: 88%;
+        height: 40px;
+        position: absolute;
+        top: 90%;
+        left: 13%;
+       }
+
+
+
+
+
+
+
+    </style>
+
+</head>
+<body>
+    <div id="主体">
+        <img  id="logo" src="logo.png">
+        <div id="table">
+            <div id="电话头">
+                <img style="position: relative;top:10px" src="手机图标.png">
+                <select style="width: 60px;border: 0px;margin-top: 21px;position: absolute;font-size: 18px;">
+                    <option>+86</option>
+                </select>
+            </div>
+            <div id="账号" ><input id="账号1" type="text" value="请输入手机号"></div>
+            <div id="密码" >
+                <img style="position: relative;top:5px;margin-left: 5px;" src="密码图标.png">
+                <input id="密码1" type="text" value="请输入密码">
+            </div>
+            <div id="自动登录" >
+                
+                <div style="color:#999;float: left;line-height: 28.5px;top:5px">
+                    <input type="checkbox" style="zoom:150%;float:left;top: 9px;position: relative;">
+                    <p style="float: right;margin-top: 13px;position: relative;">自动登录</p>
+                </div> 
+                <p style="float: right;color: #999;">
+                    <a style="color: rgb(53, 148, 250);text-decoration:none" href="">
+                    验证码登录
+                    </a>
+                </p >
+                <p style="float: right;color: #999;margin-left: 10px;margin-right: 10px;">
+                    |
+                </p>
+                <p style="margin-top: 16px;float: right;color: rgb(53, 148, 250);">
+                    <a style="color: rgb(53, 148, 250);text-decoration:none" href="">
+                        忘记密码
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <input style="font-size:20px;letter-spacing:6px;font-weight: 300;color: white;" type="submit" id="登录按钮" value="登录">
+        <a id="注册" href="">注册</a>
+        <div id="图标">
+            <a href=""><img class="图标1" src="微信图标.png"></a>
+            <a href=""><img class="图标1" src="qq图标.png"></a>
+            <a href=""><img class="图标1" src="微博图标.png"></a>
+            <a href=""><img class="图标1" src="网易图标.png"></a>
+        </div>
+        <div id="协议">
+            <input style="float: left;position: relative;top: 15px;" type="checkbox">
+            <p style="float:left;font-size: 14px;position: relative;color: #999;">同意</p>
+            <a style="float:left;font-size: 14px;position: relative;top: 14px;color: rgb(53, 148, 250);">《服务条款》</a>
+            <a style="float:left;font-size: 14px;position: relative;top: 14px;color: rgb(53, 148, 250)">《隐私政策》</a>
+            <a style="float:left;font-size: 14px;position: relative;top: 14px;color: rgb(53, 148, 250)">《儿童隐私政策》</a>
+        </div>
+         
+    </div>
+    
+</body>
+</html>
