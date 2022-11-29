@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    #mgs {
+        width: 700px;
+        color: black;
+        font-style: italic;
+        border-width: 5px;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+ 
+    #text {
+        margin-top: 20px;
+        width: 700px;
+        height: 150px;
+        border-radius: 8px;
+        font-size: 20px;
+        text-align: center;
+        margin-left: 0 ;
+        border: 0;
+        resize: none;
+        padding: 0;
+        float: left;
+        
+
+    }
+ 
+    li {
+        list-style: none;
+        border-bottom: 1px solid #999;
+        line-height: 20px;
+        margin-top: 30px;
+    }
+ 
+    span {
+        float: right;
+    }
+    .big {
+            width: 700px;
+            height: 200px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px 1px #aaaaaa;
+            transition-duration:500ms;
+            text-align: center;
+            margin:auto;
+        }
+
+    .big:hover {
+            box-shadow: 0 0 15px 3px#aaaaaa;
+            transform: scale(1.02);
+            transition-duration:500ms;
+        }
+    /* .btnbox{
+        text-align: center;
+        margin-top: 20px;
+        margin: auto;
+    }
+    .btn{
+        position: relative;
+        left: 250px;
+        margin:0 auto;
+    } */
+
+    input:focus, textarea:focus {
+    outline: none;
+}
+</style>
+ 
+<body>
+    
+    <div class="big">
+        <div id="mgs">
+            <textarea id="text"></textarea><br>
+        </div>
+        <input type="button" id="btn" value="提交">
+    </div>
+    
+    <ul class="list"></ul>
+</body>
+<script>
+    var btn = document.getElementById('btn');
+    var list = document.querySelector('.list');
+    var text = document.getElementById('text');
+    btn.onclick = function () {
+        if (text.value == '') {
+            alert('你没有输入内容。')
+        } else {
+            var li = document.createElement('li');
+             var time = new Date();
+            var mytime = time.getFullYear() + '-' + (time.getMonth() + 1) + '-' + time.getDate();
+            li.innerHTML = text.value + '<span>' + mytime + '\t' + '<button>删除</button></span>';
+            text.value = '';
+            list.insertBefore(li, list.children[0]);
+            var allB = document.querySelectorAll('button');
+            for (var i = 0; i < allB.length; i++) {
+                allB[i].onclick = function () {
+                    list.removeChild(this.parentNode.parentNode);
+                }
+            }
+
+        }
+    }
+</script>
+ 
+</html>
