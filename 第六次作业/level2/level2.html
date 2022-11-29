@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>记承天寺夜游</title>
+    
+</head>
+<body>
+    
+    <h1 style="text-align:center;font-size:25px">《记承天寺夜游》</h1>
+    <p></p>
+</body>
+<script>
+    const text = "元丰六年十月十二日夜，解衣欲睡，月色入户，欣然起行。念无与为乐者，遂至承天寺寻张怀民。怀民亦未寝，相与步于中庭。庭下如积水空明，水中藻、荇交横，盖竹柏影也。何夜无月？何处无竹柏？但少闲人如吾两人者耳。"
+    const p = document.querySelector("p");
+    const Print = () => {
+      return new Promise((resolve, reject) => {
+          if (p.innerHTML.length >= text.length) {
+            reject("end");
+          }else {
+              setTimeout(() => {
+                  p.innerHTML += text[p.innerHTML.length];
+                  Print().then((res) => {
+                     resolve(res);
+                  }).catch(err => {
+                     reject(err)
+                  });
+              }, 30);
+          }
+      });
+    };
+
+    Print()
+     .then((res) =>{
+      console.log("res", res);
+     })
+     .catch((err) => {
+      console.error(err);
+     });
+  </script>
+</html>
