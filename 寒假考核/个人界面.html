@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人界面</title>
+    <style type="text/css">
+         .header {
+            height: 35px;
+            width: 1190px;
+            margin: auto;
+        }
+ 
+        .head-left {
+            height: 35px;
+            width: 400px;
+            float: left;
+            font: 13px Arial, sans-serif;
+            color: #666666;
+        }
+ 
+        .head-right {
+            width: auto;
+            height: 35px;
+            float: right;
+            font: 13px Arial, sans-serif;
+            color: #666666;
+        }
+        .head-left a{
+            float: left;
+            margin: 6px;
+        }
+        .head-right a{
+            float: left;
+            width: auto;
+            margin: 7px;
+        }
+        .head-left a:hover {
+            color: #f60;
+        }
+ 
+        .head-right a:hover {
+            color: #f60;
+        }
+        a:link{
+            color:rgb(80, 80, 80);
+            text-decoration:none
+        }
+        a:visited{
+            color:rgb(80, 80, 80);
+            text-decoration:none
+        }
+        .toutu{
+            width: 100%;
+            height: 60px;
+            background-color: rgb(255,119,0);
+        }
+        .center-top{
+            width: 1190px;
+            height: 60px;
+            margin: auto;
+        }
+        .center-top-right{
+            width: 928.2px;
+            height: 44px;
+            float: right;
+            margin-top: 16px;
+        }
+        .center-top-right div{
+            float: left;
+            font-size: 16px;
+            line-height: 30px;
+            color: white;
+        }
+        .center-bottom{
+            width: 1190px;
+            height: 834px;
+            margin: auto;
+        }
+        .center-bottom-left{
+            width: 160px;
+            height: 834px;
+            float: left;
+            box-shadow: 0 2px 3px #a2a2a2;
+        }
+        dt{
+            font-size: 13px;
+            font-weight: bold;
+            margin: 10px;
+            margin-left: 35px;
+        }
+        dd{
+            font-size: 12px;
+            margin: 7px;
+            margin-left: 35px;
+
+        }
+        .center-bottom-right{
+            width: 1030px;
+            height: 834px;
+            float: right;
+            background-color: rgb(245,245,245);
+        }
+        .tou{
+            width: 421px;
+            height: 150px;
+            margin: 10px;
+            float: left;
+            background-color: white;
+        }
+        .zichan{
+            width: 380px;
+            height: 150px ;
+            margin: 10px;
+            margin-left: 0px;
+            float: left;
+            background-color: white;
+        }
+    </style>
+
+</head>
+<body style="margin: 0 !important">
+    <div class="header">
+        <div class="head-left">
+            <a href="">
+                <span>返回首页</span>
+            </a>
+
+            <a aira-label="网站导航" href="javascript:void(0);" class="wangzhandaohang" name="wangzhandaohang1">
+                <span>网站导航</span>
+                <em class="down">&#9660</em>
+            </a>
+            <a aira-label="商家入驻" href="https://sop.suning.com" class="shangjiaruzhu" name="shangjiaruzhu1"
+                target="_blank">
+                <span>商家入驻</span>
+                <em class="down">&#9660</em>
+            </a>
+            <a aira-label="客户服务" href="javascript:void(0);" class="kehufuwu" rel="nofollow" name="kuhufuwu1">
+                <span>客户服务</span>
+                <em class="down">&#9660</em>
+            </a>
+            <a aira-label="网页无障碍" href="javascript:void(0);">网页无障碍</a>
+           
+        </div>
+        <div class="head-right" >
+            <a  aria-label="请登录" href="javascript:SFE.base.logonurl();" name="denglu" class="login1">请登录</a>
+            <a aria-label="注册有礼" href="https://reg.suning.com/person.do" target="_blank" class="login2"
+                name="zhuce">注册有礼</a>
+            <a aria-label="我的订单" href="//order.suning.com/order/orderList.do" name="wodedingdan" class="dingdan">
+                <span>我的订单</span>
+                <em class="down">&#9660</em>
+            </a>
+            <a aria-label="我的易购" href="//my.suning.com" name="wodeyigou" class="yigou1" id="yigou2">
+                <span class="yigou2">我的易购</span>
+                <em class="down">&#9660</em>
+            </a>
+            <a aria-label="苏宁会员" href="//vip.suning.com/" name="huiyuan" class="suninghuiyuan">
+                <span class="ariatheme">苏宁会员</span>
+            </a>
+            <a aria-label="购物车" class="gouwuche" name="gouwuche1" href="//shopping.suning.com/cart.do">
+                <em class="gowuche2"></em><span class="gouwuche3">购物车</span>
+                <em class="down">&#9660</em>
+            </a>
+            <a aria-label="易付宝"
+                href="https://passport.suning.com/ids/trustLogin?sysCode=epp&amp;agentType=pc&amp;targetUrl=https://pay.suning.com/epp-epw/login/login.action"
+                name="yofubao1" class="yifubao2" target="_blank" id="yifubao3">
+                <span class="yifubao4">易付宝</span>
+            </a>
+            <a aria-label="企业采购" href="//b.suning.com/" class="qiyecaigou1" name="qiyecaigou2" target="_blank">
+                <span class="qiyecaigou3">企业采购</span>
+            </a>
+            <a aira-label="手机苏宁" href="javascript:void(0);" name="souningyigou1" class="suningyigou2"
+                id="suningyigou3">
+                <span class="suningyigou4">手机苏宁</span>
+                <em class="down">&#9660</em>
+            </a>
+
+        </div>
+    </div>
+    <div class="toutu">
+        <div class="center-top">
+           <img src="yigou.png" style="margin-top:15px;">
+           <div class="center-top-right">
+              <div style="width: 68px;height: 44px;">首页</div>
+              <div style="width: 109px;height: 44px;">账户管理</div>
+              <div style="width: 68px;height: 44px;">消息</div>
+           </div>
+        </div>
+    </div>
+    <div style="width: 100%;height: 5px;box-shadow:0 2px 10px  #cac9c9;"></div>
+    <div class="center-bottom">
+        <div class="center-bottom-left">
+            <dl>
+                <dt>我的购物车</dt>
+                <dt>订单中心</dt>
+                <dd>我的订单</dd>
+                <dd>我的常购清单</dd>
+                <dd>我的回收订单</dd>
+                <dd>服务订单</dd>
+                <dt>我的资产</dt>
+                <dd>我的云钻</dd>
+                <dd>我的金融</dd>
+                <dd>我的优惠券</dd>
+                <dd>我的苏宁卡</dd>
+                <dd>我的任性付</dd>
+                <dd>我的红包</dd>
+                <dt>关注中心</dt>
+                <dd>我的关注</dd>
+                <dd>我的足迹</dd>
+                <dd>我的评价</dd>
+                <dd>我的抽奖</dd>
+                <dt>自助服务</dt>
+                <dd>退换/售后</dd>
+                <dd>服务收费公示</dd>
+                <dd>我要价保</dd>
+                <dd>交易纠纷</dd>
+                <dd>修改订单</dd>
+                <dd>服务自助预约</dd>
+                <dd>代客修</dd>
+                <dd>举报管理</dd>
+                <dd>我的服务套餐</dd>
+                <dd>我的发票</dd>
+                <dt>特色服务</dt>
+                <dd>我的预约</dd>
+            </dl>
+        </div>
+        <div class="center-bottom-right">
+            <div class="tou">
+                <div style="width: 93px;height:88px;margin-top: 30px;margin-left: 20px;float: left;">
+                   <a href="" style="width: 90px;height: 80px;display: block;">
+                       <img src="https://image.suning.cn/uimg/cmf/cust_headpic/0000000000_01_120x120.jpg" style="width: 88px;height: 88px;">
+                   </a>
+                </div>
+                <div style="float: left;width: auto;padding: 28px 0 0 10px;width: 279.66px;height: 123.2px;">
+                   <div class="user-name">
+                     <span class="user-name-span">呃呃呃不是吧</span>
+                   </div>
+                   <div class="account-safe" style="margin-top: 20px;height: 15px;">
+                     账户安全&nbsp;&nbsp;：
+                   </div>
+                   <div class="address" style="margin-top: 21px;">
+                     <span>
+                        <a href="">我的收货地址 ></a>
+                     </span>
+                   </div>
+
+                </div>
+            </div>
+            <div class="zichan">
+                <div style="width: 380px;height: 110.8px;float: left; border-bottom:1px solid #cac9c9 ;">
+                    <div class="yun-left" style="width: 24px;height: 18px;padding-left: 27px;margin-top: 43px;float: left;">
+
+                    </div>
+                    <div style="width: 78.213px;height: 19.6px;padding-left: 9px;padding-top: 42px;float: left;">
+                        我的云钻:0
+                    </div>
+                </div>
+                <div style="width: 380px;height: 40px;float: left;">
+                    <div style="width: 190.8px;height: 40px;float: left;text-align: center;border-right:1px solid #cac9c9 ">
+                       <a href="" style="display: block;margin-top: 8px;">我的资产</a>
+                    </div>
+                    <div style="width: 130px;height: 40px;float: left;text-align: center;">
+                       <a href="" style="display: block;margin-top: 8px;">我的任性付</a>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 199px;height: 150px;float: left;margin-top: 10px;">
+                <a style="width: 199px;height: 110px;display: block;"><img src="https://image.suning.cn/uimg/cms/img/151774406177253561.png"></a>
+                <a style="width:199px;height: 40px;display: block;"><img src="https://res.suning.cn/project/msIndex/index/newMember/image/super.png"></a>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

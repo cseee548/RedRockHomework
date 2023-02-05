@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="bookmark" href="/favicon.ico"/>
+    <style type="text/css">
+        #头部{
+            height: 100px;
+            width: 970px;
+            top:0%;
+            margin: auto;
+            
+            
+        }
+        #背景{
+            width: 1519.2px;
+            height: 570px;
+            margin: auto;
+            background: url(背景.jpg) no-repeat center center;
+
+        }
+        #登录{
+            width: 360px;
+            height: 408.8px;
+            position: relative;
+            left: 884px;
+            top: 50px;
+            background-color: white;
+        }
+        a:link{
+            color:rgb(80, 80, 80);
+            text-decoration:none
+        }
+        a:visited{
+            color:rgb(80, 80, 80);
+            text-decoration:none
+        }
+        a:hover{
+            color: orange;
+            text-decoration:underline;
+        }
+        button{
+            width: 180px;
+            height: 50px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            padding: 0;
+            background-color: white;
+        }
+        button:focus{
+            color: orange;
+            font-weight: 600;
+            border: none;
+        }
+        #saoma{
+            top:50px;
+            height: 253px;
+            width: 360px;
+            border-top: 1px solid rgb(202,202,202);
+            
+        }
+        #mima{
+            top:50px;
+            width: 360px;
+            display: none;
+            border-top: 1px solid rgb(202,202,202);
+        }
+       #surp{
+            width: 360px;
+            height: 18px;
+            text-align: center;
+            font-size: 13px;
+            color: orange;
+       }
+       #fenge{
+            width: 128px;
+            height: 18px;
+            text-align: center;
+            font-size: 13px;
+            margin: auto;
+       }
+       #other{
+            width: 360px;
+            height: 61px;
+            margin-top: 27px;
+       }
+       .mes{
+            width: 990px;
+            height: 25px;
+            margin: auto;
+            text-align: center;
+            line-height: 25px;
+            font-size: 12px;
+       }
+       .mes-a{
+            margin: 5px;
+       }
+       .tubiao{
+            width: 310px;
+            height:auto;
+            margin:auto;
+            font-size: 13px;
+       }
+       .tubiao div{
+            margin-top: 10px;
+            width: auto;
+            float: left;
+            padding-left: 15px;
+       }
+       #zhanghao{
+            width: 312px;
+            height: 36px;
+            margin-top: 40px;
+            margin-left: 24px;
+            border: 1px solid rgb(202,202,202);
+            display: flex;
+       }
+       #mi{
+           width: 312px;
+           height: 36px;
+           margin-top: 20px;
+           margin-left: 24px;
+           border: 1px solid rgb(202,202,202);
+           display: flex;
+       }
+       #denglu{
+           width: 310px;
+           height: 40px;
+           margin: auto;
+           padding-top: 65px;
+       }
+       #denglu button{
+           width: 310px;
+           height: 40px;
+           background-color: orangered;
+           color: white;
+           font-weight: 600;
+           font-size: 20px;
+           
+       }
+       #mima input{
+        width: 276px;
+        height: 36px;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        outline: none;
+       }
+    </style>
+    
+</head>
+<body style="padding: 0%;margin: 0%;">
+    <div id="头部">
+       <img src="logo.png" style="width: 290px;object-fit:contain;width: 189px;height: 100px;">
+    </div>
+    <div id="背景">
+        
+       <div id="登录">
+        <button onclick="btn1()">扫码登录</button><button onclick="btn2()" >账户登录</button>  
+        <div id="saoma">
+
+        </div>
+        <div id="mima">
+          <div id="zhanghao" >
+           <div style="box-sizing: border-box;margin: 0 0 0 0;width:36px;height: 36px;"><img src="zhanghao.png" style="margin: 7px 12px 0 8px;"></div><input placeholder="用户名/手机/邮箱">
+          </div>
+          <div id="mi">
+           <div style="box-sizing: border-box;margin: 0 0 0 0;width:36px;height: 36px;"><img src="mi.png" style="margin: 7px 16px 0 8px;"></div><input placeholder="密码">
+          </div>
+          <div id="denglu"><button>登 录</button></div>
+        </div>
+        <div id="surp"><a href="注册.html" style="color: orange;">注册 有惊喜 ></a></div>
+        <div id="other">
+            <div id="fenge">使用以下账号登录</div>
+            <div class="tubiao"><div><img src="qq.png"><a href="">QQ</a></div><div><img src="weixin.png"><a href="">微信</a></div><div><img src="yifu.png"><a href="">易付宝</a></div><div><img src="weibo.png"><a href="">微博</a></div></div>
+        </div>
+       </div>
+    </div>
+   <div>
+    <div class="mes"><a class="mes-a" href="">苏宁互联</a>|<a class="mes-a" href="">苏宁金融</a>|<a class="mes-a" href="">苏宁支付</a>|<a class="mes-a" href="">PP视频</a>|<a class="mes-a" href="">苏宁物流</a>|<a class="mes-a" href="">零售云</a>|<a class="mes-a" href="">知识产权举报</a>|<a class="mes-a" href="">投资者关系</a>|<a class="mes-a" href="">苏宁智能</a>|<a class="mes-a" href="">苏宁易采云</a></div>
+    
+    <div class="mes"><a class="mes-a" href="">联系我们</a>|<a class="mes-a" href="">诚聘英才</a>|<a class="mes-a" href="">合作招商</a>|<a class="mes-a" href="">广告平台</a>|<a class="mes-a" href="">苏宁联盟</a>|<a class="mes-a" href="">鹤桥联盟</a>|<a class="mes-a" href="">苏宁招标</a>|<a class="mes-a" href="">隐私政策</a>|<a class="mes-a" href="">用户体验提升计划</a>|<a class="mes-a" href="">股东会员认证</a></div>
+    
+    <div class="mes">Copyright© 2020-2022深圳市云网万店电子商务有限公司版权所有| 苏公网安备 32010202010078号| 粤ICP备2021027996号</div>
+
+    <div class="mes">江苏苏宁易购增值电信许可证| 出版物经营许可证新出发苏批字第A-243号| 互联网药品信息服务资格证书（苏）-非经营性-2021-0032</div>
+
+    <div class="mes">经营证照|互联网违法和不良信息举报邮箱：kfpt-yy@cnsuning.com| 举报电话：02566996699-865948</div>
+
+    <div class="mes">医疗器械网络交易服务第三方平台备案凭证-（苏）网械平台备字（2018）第00052号| 变更公告| 云网万店营业执照| 合字B2-20210115</div>
+
+    <div class="mes">网信算备440303176429902220013号</div>
+
+    <div class="mes">本网站直接或间接向消费者推销商品或者服务的商业宣传均属于“广告”（包装及参数、售后保障等商品信息除外）</div>
+
+    
+  </div>
+<script>
+    function btn1() {
+        document.getElementById('saoma').style.display = 'block';
+        document.getElementById('saoma').style.display = 'block';
+        document.getElementById('mima').style.display = 'none';
+    }
+
+    function btn2() {
+        document.getElementById('saoma').style.display = 'none';
+        document.getElementById('mima').style.display = 'block';
+    }
+
+
+    
+</script>
+</body>
+</html>

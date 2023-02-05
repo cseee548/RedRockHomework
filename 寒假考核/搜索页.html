@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详情页</title>
+    <style type="text/css">
+        .header {
+            height: 35px;
+            width: 1390px;
+            margin: auto;
+        }
+ 
+        .head-left {
+            height: 35px;
+            width: 382px;
+            float: left;
+            font: 13px Arial, sans-serif;
+            color: #666666;
+        }
+ 
+        .head-right {
+            width: auto;
+            height: 35px;
+            float: right;
+            font: 13px Arial, sans-serif;
+            color: #666666;
+        }
+        .head-left a{
+            float: left;
+            margin: 6px;
+        }
+        .head-right a{
+            float: left;
+            width: auto;
+            margin: 7px;
+        }
+        .head-left a:hover {
+            color: #f60;
+        }
+ 
+        .head-right a:hover {
+            color: #f60;
+        }
+        .bodyer{
+            width: 1390px;
+            height: 100px;
+            margin: auto;
+        }
+        .logo img {
+            width: 190px;
+            height: 90px;
+            margin-top: 10px;
+        }
+        .search{
+            width: 540px;
+            height: 100px;
+            margin-left: 360px;
+            margin-top: -100px;
+        }
+        #search-input {
+            height: 36px;
+            width: 419.6px;
+            float: left;
+            margin-top: 30px;
+        }
+ 
+        #search-input input {
+            height: 36px;
+            width: 100%;
+            padding: 0;
+            border-radius: 10px 0 0 10px;
+            font-size: 16px;
+            border-right: 0px;
+            border-color:orange;
+            border-style: solid;
+            outline: none;
+        }
+
+        #search-btn {
+            height: 39px;
+            width: 120px;
+            float: right;
+            margin-top: 30px;
+
+        }
+ 
+        #search-btn input {
+            height: 39px;
+            width: 120px;
+            border: 0;
+            border-radius: 0 10px 10px 0;
+            background-color: #ff8000;
+            font-size: 18px;
+            color: #fff;
+            font-weight: bolder;
+        }
+        .search a{
+            font-family: 'Microsoft Yahei', tahoma, arial, 'Hiragino Sans GB';
+            text-decoration: none;
+            float: left;
+            white-space: nowrap;
+            font-size: 12px;
+            margin: 10px 0 3px -11px;
+            padding: 0 20px 0 10px;
+            border-left: 1px solid #ddd;
+            height: 12px;
+            line-height: 12px;
+            color: rgb(180, 180, 180);
+        }
+ 
+        .bar {
+            width: 1390px;
+            height: 38px;
+            margin-top: 10px;
+            margin: auto;
+        }
+     
+        .fenlei{
+            width: 200px;
+            height: 38px;
+            float: left;
+            background-color: #ff8000;
+            border-radius: 10px 10px 0 0;
+        }
+
+       
+        .nav-cover {
+            position: absolute;
+            width: 200px;
+            height: 400px;
+            background: #fff;
+            top: 0;
+            left: 0;
+        }
+        
+        .index-sort-list-box{
+            width: 200px;
+            height: 476px;
+            float: left;
+        }
+
+        .ng-nav-index {
+            width: 794px;
+            height: 38px;
+            line-height: 38px;
+            font-family: "Microsoft Yahei";
+            float: left;
+        }
+ 
+        .bar .ng-nav-index ul.ng-nav .title-pic {
+            width: 110px;
+            height: 38px;
+            padding: 0;
+ 
+        }
+ 
+        .bar .ng-nav-index ul.ng-nav li {
+            position: relative;
+            height: 38px;
+            font-weight: bold;
+        }
+ 
+        .ng-nav-index ul.ng-nav li {
+            float: left;
+            display: block;
+            position: relative;
+            height: 38px;
+            font-weight: bold;
+            padding: 0 12px 0 13px;
+        }
+ 
+        .bar .ng-nav-index ul.ng-nav li a {
+            text-decoration: none;
+            font-family: "Microsoft Yahei", tahoma, arial, "Hiragino Sans GB";
+        }
+ 
+        .ng-nav-index ul.ng-nav li a {
+            position: relative;
+            float: left;
+            font-size: 15px;
+        }
+ 
+        .bar .ng-nav-index ul.ng-nav .title-pic img {
+            display: block;
+            width: 100%;
+            height: 38px;
+        }
+
+        .footer-top-1 {
+            width: 1390px;
+            height: 97.8px;
+            margin: auto;
+            margin-top: 10px;
+        }
+        
+        .footer-top-1 ul li {
+            width: 230px;
+            height: 52.4px;
+            float: left;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        .footer-top-1 ul{
+            width: 1390px;
+            height: 52.4px;
+            list-style:none
+        }
+        .footer-top-1 ul li img {
+            height:48px;
+            width: 48px;
+            float: left;
+        }
+ 
+        .footer-top-1 ul li span{
+            display: block;
+            margin-left: 48px;
+            font-size: 9px;
+            width: 120px;
+            height: 24px;
+        }
+        .footer-top-2 {
+            width: 1140px;
+            height: 180px;
+            margin: auto;
+        }
+ 
+        .footer-top-2 dl {
+            width: 210px;
+            height: 160px;
+            float: left;
+        }
+ 
+        .footer-top-2 dl dt {
+            color: #545454;
+            font-weight: 1000;
+        }
+ 
+        .footer-top-2 dl dd {
+            font-size: 10px;
+            color: #666666;
+            margin-left: 0px;
+            margin-top: 8px;
+        }
+        .footer-bottom {
+            text-align: center;
+        }
+ 
+        .footer-bottom p {
+            margin: 1rem 0;
+        }
+ 
+        .footer-bottom p a {
+            color: #666666;
+            padding: 0 1rem;
+        }
+ 
+        .footer-bottom p a:hover {
+            color: #f60;
+        }
+ 
+        .footer-bottom p a:nth-child(n+2) {
+            border-left: 0.1rem solid #666666;
+        }
+ 
+        .footer-bottom p:nth-child(n+3) {
+            font-size: 0.5rem;
+        }
+        #img{
+            width: 794px;
+            height: 476px;
+            background: url(1.jpg);
+            transition: all 1s;
+            float: left;
+        }
+       
+        a:link{
+            color:rgb(80, 80, 80);
+            text-decoration:none
+        }
+        a:visited{
+            color:rgb(80, 80, 80);
+            text-decoration:none
+        }
+        .dd{
+            font-size: 15px;
+        }
+        .mes{
+            width: 990px;
+            height: 25px;
+            margin: auto;
+            text-align: center;
+            line-height: 25px;
+            font-size: 12px;
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            margin-left: 20px;
+        }
+        .paixu{
+            width: 1390px;
+            height: 38px;
+            margin: auto;
+        }
+        .paixu input{
+            float: left;
+            font-size: 13px;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            border: 0px;
+            outline: none;
+        }
+        .paixu input:focus{
+            border-bottom: 3px solid #f60;
+        }
+
+        .center{
+            width:1390px;
+            height: 505px;
+            margin: auto;
+        }
+
+        .shangpin{
+            width: 270px;
+            height: 505px;
+            float: left;
+        }
+        .shangpin:hover{
+            box-shadow: 0 0 3px 1px #aaaaaa;           
+        }
+        .xuanfu{
+        width: 35px;
+        height: 755px;
+        position: fixed;
+        top: 0%;
+        right: 0px;
+        background-color: rgb(56,56,56);
+       }
+    </style>
+</head>
+<body style="margin: 0;padding: 0;">
+    <div class="header">
+        <div class="head-left">
+            <a aira-label="网站导航" href="javascript:void(0);" class="wangzhandaohang" name="wangzhandaohang1">
+                <span>网站导航</span>
+                <em class="down">&#9660</em>
+            </a>
+            <a aira-label="商家入驻" href="https://sop.suning.com" class="shangjiaruzhu" name="shangjiaruzhu1"
+                target="_blank">
+                <span>商家入驻</span>
+                <em class="down">&#9660</em>
+            </a>
+            <a aira-label="客户服务" href="javascript:void(0);" class="kehufuwu" rel="nofollow" name="kuhufuwu1">
+                <span>客户服务</span>
+                <em class="down">&#9660</em>
+            </a>
+            <a aira-label="网页无障碍" href="javascript:void(0);">网页无障碍</a>
+            <a><span>重庆</span>
+                <em class="down">&#9660</em>
+            </a>
+        </div>
+        <div class="head-right" >
+            <a  aria-label="请登录" href="javascript:SFE.base.logonurl();" name="denglu" class="login1">请登录</a>
+            <a aria-label="注册有礼" href="https://reg.suning.com/person.do" target="_blank" class="login2"
+                name="zhuce">注册有礼</a>
+            <a aria-label="我的订单" href="//order.suning.com/order/orderList.do" name="wodedingdan" class="dingdan">
+                <span>我的订单</span>
+                <em class="down">&#9660</em>
+            </a>
+            <a aria-label="我的易购" href="//my.suning.com" name="wodeyigou" class="yigou1" id="yigou2">
+                <span class="yigou2">我的易购</span>
+                <em class="down">&#9660</em>
+            </a>
+            <a aria-label="苏宁会员" href="//vip.suning.com/" name="huiyuan" class="suninghuiyuan">
+                <span class="ariatheme">苏宁会员</span>
+            </a>
+            <a aria-label="购物车" class="gouwuche" name="gouwuche1" href="//shopping.suning.com/cart.do">
+                <em class="gowuche2"></em><span class="gouwuche3">购物车</span>
+                <em class="down">&#9660</em>
+            </a>
+            <a aria-label="易付宝"
+                href="https://passport.suning.com/ids/trustLogin?sysCode=epp&amp;agentType=pc&amp;targetUrl=https://pay.suning.com/epp-epw/login/login.action"
+                name="yofubao1" class="yifubao2" target="_blank" id="yifubao3">
+                <span class="yifubao4">易付宝</span>
+            </a>
+            <a aria-label="企业采购" href="//b.suning.com/" class="qiyecaigou1" name="qiyecaigou2" target="_blank">
+                <span class="qiyecaigou3">企业采购</span>
+            </a>
+            <a aira-label="手机苏宁" href="javascript:void(0);" name="souningyigou1" class="suningyigou2"
+                id="suningyigou3">
+                <span class="suningyigou4">手机苏宁</span>
+                <em class="down">&#9660</em>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="bodyer">
+        <a href="https://www.suning.com/" class="logo">
+           <img src="logo.png">
+        </a>
+        <div class="search">
+            <div id="search-input">
+                <input type="text">
+            </div>
+
+            <div id="search-btn">
+                <input type="submit" value="搜 索">
+            </div>
+            
+            <div class="search-hotwords">
+                <a name="手机" target="_blank" href="//search.suning.com/%E6%89%8B%E6%9C%BA/">手机</a>
+                <a name="爆款洗衣机" target="_blank"
+                    href="http://th.suning.com/cpm/calCpmClick?adtype=3&amp;sid=17388201&amp;tid=1738820120220711&amp;click_id=QkUnlBI0Bm9ELA6h37xku0LKlT&amp;ap=YmEzYjVjOTk3MDE5NGYzYzhkYWIxOTZkMmUwZjRiYzl8MTAwMDAzNTc0fDE3Mzg4MjAxMjAyMjA3MTF8MTczODgyMDF8aHR0cHM6Ly9yZS5zdW5pbmcuY29tL2tleXdvcmQvJUU2JUI0JTk3JUU4JUExJUEzJUU2JTlDJUJBLz91dG1fc291cmNlPXpuLXpmLXR0NS1vMi1hZCZ1dG1fbWVkaXVtPWFiLWJ4Ni0wMDAwLXBjMi1yYnxjcG18MjAyMi0wNy0xMSAyMDoxMDoyOXwxNjU3NTQxNDI5NzA4Mjk3MDE1NXwxMTIuOS4xOTguMTIyfDAuMHxodHRwczovL3d3dy5zdW5pbmcuY29tL3w0Mjg5Nzg3NDl8MTY1NzI0MDA5MTkwNTk3NTY1fDMxMDE0OTUzfDIwfDEyMHwxMC45NS42NS4yMDV8MHx8cGN8fDAzYzE1MDIxNDViMWIwZWRlNTlkYjM0MzUwOTdiODIzfHwxMDAwMDM1NzR8fHx8fHzniIbmrL7mtJfooaPmnLp8fDUzNHx8fHx8fHwwLjB8&amp;clickUrl=https%3A%2F%2Fre.suning.com%2Fkeyword%2F%25E6%25B4%2597%25E8%25A1%25A3%25E6%259C%25BA%2F%3Futm_source%3Dzn-zf-tt5-o2-ad%26utm_medium%3Dab-bx6-0000-pc2-rb%26adtype%3D3">
+                    爆款洗衣机
+                </a>
+                <a name="冰箱" target="_blank" href="//search.suning.com/%E5%86%B0%E7%AE%B1/">冰箱</a>
+                <a name="奶粉特惠购" target="_blank"
+                    href="http://th.suning.com/cpm/calCpmClick?adtype=3&amp;sid=17388209&amp;tid=1738820920220711&amp;click_id=QkUnlBI0Bm9EL4ff37xkusU3JH&amp;ap=Y2IxNzEzNTAxNzdkNzdjODdmYTllNjhhNGVlM2ZiNjB8MTAwMDAzNTc1fDE3Mzg4MjA5MjAyMjA3MTF8MTczODgyMDl8aHR0cHM6Ly9yZS5zdW5pbmcuY29tL2tleXdvcmQvJUU1JUE1JUI2JUU3JUIyJTg5Lz91dG1fc291cmNlPXpuLXpmLXR0NS1vMS1hZCZ1dG1fbWVkaXVtPWFiLWhoejYtMDAwMC16MS1uZi1yYnxjcG18MjAyMi0wNy0xMSAyMDoxMDoyOXwxNjU3NTQxNDI5NzA4Mjk3MDE1NXwxMTIuOS4xOTguMTIyfDAuMHxodHRwczovL3d3dy5zdW5pbmcuY29tL3w0Mjg5Nzg3NDl8MTY1NzI0MDA5MTkwNTk3NTY1fDMwODY4MjgwfDIwfDEyMHwxMC45NS42NS4yMDV8MHx8cGN8fDg4Nzc4OGExYWFlYTc0MTcyMWI4ZDU3MDBmOWJjMGVifHwxMDAwMDM1NzV8fHx8fHzlpbbnsonnibnmg6DotK18fDUzNHx8fHx8fHwwLjB8&amp;clickUrl=https%3A%2F%2Fre.suning.com%2Fkeyword%2F%25E5%25A5%25B6%25E7%25B2%2589%2F%3Futm_source%3Dzn-zf-tt5-o1-ad%26utm_medium%3Dab-hhz6-0000-z1-nf-rb%26adtype%3D3">
+                    奶粉特惠购
+                </a>
+                <a name="品质家具购" target="_blank"
+                    href="http://th.suning.com/cpm/calCpmClick?adtype=3&amp;sid=17388211&amp;tid=1738821120220711&amp;click_id=QkUnlBJ0Bm9ELKB937xkv61ERj&amp;ap=ZGJiNjlmNTFhMDQxNGFiYzcwZWZjNGRkYTM1MmIxYzZ8MTAwMDAzNTczfDE3Mzg4MjExMjAyMjA3MTF8MTczODgyMTF8aHR0cHM6Ly9yZS5zdW5pbmcuY29tL2tleXdvcmQvJUU1JUJBJThBLz91dG1fc291cmNlPXpuLXpmLXR0NS1vMS1hZCZ1dG1fbWVkaXVtPWFiLWp6Ni0wMDAwLXoxLWpqLXJifGNwbXwyMDIyLTA3LTExIDIwOjEwOjI5fDE2NTc1NDE0Mjk3MDgyOTcwMTU1fDExMi45LjE5OC4xMjJ8MC4wfGh0dHBzOi8vd3d3LnN1bmluZy5jb20vfDQyODk3ODc0OXwxNjU3MjQwMDkxOTA1OTc1NjV8MzA4NjgyODJ8MjB8MTIwfDEwLjk1LjY1LjIwNXwwfHxwY3x8NjZhZWIxYWY5NGVkNzQ2M2U0ZGMxYThmMDU0NDFiNDV8fDEwMDAwMzU3M3x8fHx8fOWTgei0qOWutuWFt%2Bi0rXx8NTM0fHx8fHx8fDAuMHw%3D&amp;clickUrl=https%3A%2F%2Fre.suning.com%2Fkeyword%2F%25E5%25BA%258A%2F%3Futm_source%3Dzn-zf-tt5-o1-ad%26utm_medium%3Dab-jz6-0000-z1-jj-rb%26adtype%3D3">
+                    品质家具购
+                </a>
+                <a name="电视" target="_blank" href="//search.suning.com/%E7%94%B5%E8%A7%86/">电视</a>
+                <a name="ipad" target="_blank" href="//search.suning.com/ipad/">ipad</a>
+                <a name="热水器" target="_blank" href="//search.suning.com/%E7%83%AD%E6%B0%B4%E5%99%A8/">热水器</a>
+                <a name="沙发" target="_blank" href="//search.suning.com/%E6%B2%99%E5%8F%91/">沙发</a>
+            </div>
+        </div>
+       
+    </div>
+    <div class="bar">
+        <div class="fenlei">
+            <a  title="分类" aria-label="分类" href="https://list.suning.com/" target="_blank" style="display: block;">
+                <img style="float: left;margin: 10px;margin-top: 5px;" src="分类.png"><p style="font-size:15px;color: white;font-weight: 600;margin-top: 10px;">分类</p>
+            </a>             
+        </div>
+        <div class="ng-nav-index">
+            <ul class="ng-nav" style="margin-left: px;">
+                <li class="title-pic">
+                    <a title="大聚惠" aria-label="大聚惠" href="https://qiang.suning.com/pc/brandBenefits.html"
+                        target="_blank" data-color="" style="color: rgb(51, 51, 51)">
+                        <img class="icon" src="10016.png" alt="" />
+                    </a>
+                    <span></span>
+                </li>
+                <li>
+                    <a title="苏宁家电" aria-label="苏宁家电" href="https://dianqi.suning.com" target="_blank" data-color=""
+                        style="color: rgb(51, 51, 51)">
+                        苏宁家电
+                        <i class="hot"></i>
+                    </a>
+                    <span></span>
+                </li>
+                <li>
+                    <a title="手机数码" aria-label="手机数码" href="https://pindao.suning.com/city/wan3C.html"
+                        target="_blank" data-color="" style="color: rgb(51, 51, 51)">
+                        手机数码
+                    </a>
+                    <span></span>
+                </li>
+                <li>
+                    <a title="苏宁超市" aria-label="苏宁超市" href="https://chaoshi.suning.com" target="_blank"
+                        data-color="" style="color: rgb(51, 51, 51)">
+                        苏宁超市
+                    </a>
+                    <span></span>
+                </li>
+                <li>
+                    <a title="家具建材" aria-label="家具建材" href="https://pindao.suning.com/city/jiazhuang.html"
+                        target="_blank" data-color="" style="color: rgb(51, 51, 51)">
+                        家具建材
+                        <i class="new"></i>
+                    </a>
+                    <span></span>
+                </li>
+                <li>
+                    <a title="生活家电" aria-label="生活家电" href="https://pindao.suning.com" target="_blank" data-color=""
+                        style="color: rgb(51, 51, 51)">
+                        生活家电
+                    </a>
+                    <span></span>
+                </li>
+                <li>
+                    <a title="帮客服务" aria-label="帮客服务" href="https://pindao.suning.com/city/bangke.html"
+                        target="_blank" data-color="" style="color: rgb(51, 51, 51)">
+                        帮客服务
+                    </a>
+                    <span></span>
+                </li>
+                <li>
+                    <a title="药品信息" aria-label="药品信息" href="https://pindao.suning.com/city/bangke.html"
+                        target="_blank" data-color="" style="color: rgb(51, 51, 51)">
+                        药品信息
+                    </a>
+                    <span></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+         <div class="paixu">
+            <input type="button" style="width: 64px;" value="综合">
+            <input type="button" style="width: 75px;" value="销量">
+            <input type="button" style="width: 87px;" value="评价">
+            <input type="button" style="width: 76px;" value="价格">       
+         </div>
+         <div class="center">
+            <div class="shangpin">
+               <img src="13.jpg" style="width: 240px;height: 240px ;margin: 30px 15px 12px 15px;">    
+               <div style="width: 240px;height: 22px;margin: auto;border:1px solid #aaaaaa;margin-bottom: 9px;"></div>
+               <div style="width: 240px;height: 40px;margin: auto;border:1px solid #aaaaaa;margin-bottom: 8px;"></div>
+               <div style="width: 240px;height: 14px;margin: auto;border:1px solid #aaaaaa;margin-bottom: 6px;"></div>
+               <div style="width: 240px;height: 18px;margin: auto;border:1px solid #aaaaaa;margin-bottom: 62px;"></div>
+               <div style="width: 240px;height: 28px;margin: auto;border:1px solid #aaaaaa;margin-bottom: 6px;">
+                 <div style="width: 72.8px;height: 28px;border-right:1px solid #aaaaaa ;float: left;">对比</div>
+                 <div style="width: 72.8px;height: 28px;border-right:1px solid #aaaaaa ;float: left;">关注</div>
+                 <div style="width: auto;height: 28px;float: left;">查看详情</div>
+               </div>
+               
+            </div>
+         </div>
+        
+        <footer class="sn-footer">
+            <div class="footer-top" style="background-color: rgb(248,248,250);">
+                <div class="footer-top-1">
+                    <ul>
+                        <li><a href=""><img src="11.jpg" alt=""></a><strong>正品保障</strong><span>正品保障、提供发票</span></li>
+                        <li><a href=""><img src="12.jpg" alt=""></a><strong>急速物流</strong><span>如约送货、送货入户</span></li>
+                        <li><a href=""><img src="13.jpg" alt=""></a><strong>售后无忧</strong><span>30天包退、365天包换</span></li>
+                        <li><a href=""><img src="14.jpg" alt=""></a><strong>帮助中心</strong><span>您的购物指南</span></li>
+                        <li style="margin: 0px;margin-top: 10px;"><a href=""><img src="15.jpg" alt=""></a><strong>省心购</strong><span>专注好服务</span></li>
+                    </ul>
+                </div>
+                <div class="footer-top-2">
+                        <dl>
+                            <dt>购物指南</dt>
+                            <dd class="dd"><a href="">导购演示</a></dd>
+                            <dd class="dd"><a href="">免费注册</a></dd>
+                            <dd class="dd"><a href="">会员等级</a></dd>
+                            <dd class="dd"><a href="">常见问题</a></dd>
+                            <dd class="dd"><a href="">品牌大全</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>支付方式</dt>
+                            <dd class="dd"><a href="">苏宁支付</a></dd>
+                            <dd class="dd"><a href="">网银支付</a></dd>
+                            <dd class="dd"><a href="">快捷支付</a></dd>
+                            <dd class="dd"><a href="">分期支付</a></dd>
+                            <dd class="dd"><a href="">货到支付</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>物流配送</dt>
+                            <dd class="dd"><a href="">运费政策</a></dd>
+                            <dd class="dd"><a href="">物流配送服务</a></dd>
+                            <dd class="dd"><a href="">签收验货</a></dd>
+                            <dd class="dd"><a href="">物流查询</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>售后服务</dt>
+                            <dd class="dd"><a href="">免费注册</a></dd>
+                            <dd class="dd"><a href="">会员等级</a></dd>
+                            <dd class="dd"><a href="">常见问题</a></dd>
+                            <dd class="dd"><a href="">品牌大全</a></dd>
+                            <dd class="dd"><a href="">支付方式</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>购物指南</dt>
+                            <dd class="dd"><a href="">导购演示</a></dd>
+                            <dd class="dd"><a href="">免费注册</a></dd>
+                            <dd class="dd"><a href="">会员等级</a></dd>
+                            <dd class="dd"><a href="">常见问题</a></dd>
+                            <dd class="dd"><a href="">品牌大全</a></dd>
+                        </dl>
+                        <dl style="width: 90px;">
+                           <dt>身边苏宁</dt>
+                            <div style="font-size: 10px;margin-top: 8px;color: #666666;">全国300多个城市，上万个门店和服务终端期待您的光临，为您提供最贴心的服务！</div>
+                        </dl>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="mes"><a class="mes-a" href="">苏宁互联</a>|<a class="mes-a" href="">苏宁金融</a>|<a class="mes-a" href="">苏宁支付</a>|<a class="mes-a" href="">PP视频</a>|<a class="mes-a" href="">苏宁物流</a>|<a class="mes-a" href="">零售云</a>|<a class="mes-a" href="">知识产权举报</a>|<a class="mes-a" href="">投资者关系</a>|<a class="mes-a" href="">苏宁智能</a>|<a class="mes-a" href="">苏宁易采云</a></div>
+        
+                <div class="mes"><a class="mes-a" href="">联系我们</a>|<a class="mes-a" href="">诚聘英才</a>|<a class="mes-a" href="">合作招商</a>|<a class="mes-a" href="">广告平台</a>|<a class="mes-a" href="">苏宁联盟</a>|<a class="mes-a" href="">鹤桥联盟</a>|<a class="mes-a" href="">苏宁招标</a>|<a class="mes-a" href="">隐私政策</a>|<a class="mes-a" href="">用户体验提升计划</a>|<a class="mes-a" href="">股东会员认证</a></div>
+        
+                <div class="mes">Copyright© 2020-2022深圳市云网万店电子商务有限公司版权所有| 苏公网安备 32010202010078号| 粤ICP备2021027996号</div>
+    
+                <div class="mes">江苏苏宁易购增值电信许可证| 出版物经营许可证新出发苏批字第A-243号| 互联网药品信息服务资格证书（苏）-非经营性-2021-0032</div>
+    
+                <div class="mes">经营证照|互联网违法和不良信息举报邮箱：kfpt-yy@cnsuning.com| 举报电话：02566996699-865948</div>
+    
+                <div class="mes">医疗器械网络交易服务第三方平台备案凭证-（苏）网械平台备字（2018）第00052号| 变更公告| 云网万店营业执照| 合字B2-20210115</div>
+    
+                <div class="mes">网信算备440303176429902220013号</div>
+    
+                <div class="mes">本网站直接或间接向消费者推销商品或者服务的商业宣传均属于“广告”（包装及参数、售后保障等商品信息除外）</div>
+            </div>
+        </footer>
+
+        <div class="xuanfu">
+            <div style="position: absolute;top: 0;right: 0;width: 35px;height: 150px;"></div>
+            <div style="position: absolute;top: 178px;width: 35px;height: 357px;">
+               <div style="width: 35px;height: 30px;margin-bottom: 10px;background-image: url(xuanfu.png);"></div>
+               <div style="width: 35px;height: 116.6px;margin-bottom: 5px;border-top: 1px solid #535353;border-bottom:1px solid #535353 ;">
+                 <div style="width: 35px;height: 30px;background-image: url(xuanfu.png);background-position: 3px -208px;"></div>
+                 <span style="display: block;width: 20px;text-align: center;margin-left: 8px;font-size: 10px;margin-top: 5px;color: white;">购物车</span>
+               </div>
+               <div style="width: 35px;height: 30px;margin-bottom: 10px;background-image: url(xuanfu.png);background-position: 0 -25px;"></div>
+               <div style="width: 35px;height: 105px;position: absolute;bottom: 0;">
+                  <div style="width: 35px;height: 30px;margin-bottom: 10px;background-image: url(xuanfu.png);background-position: 0 -47px;"></div>
+                  <div style="width: 35px;height: 30px;margin-bottom: 10px;background-image: url(xuanfu.png);background-position: 0 -70px;"></div>
+                  <div style="width: 35px;height: 30px;margin-bottom: 10px;background-image: url(xuanfu.png);background-position: 0 -95px;"></div>
+               </div>
+            </div>
+            <div style="position: absolute;bottom:5px ;width: 35px;height: 140px;">
+               <div style="width: 35px;height: 30px;margin-bottom: 10px;background-image: url(xuanfu.png);background-position: 0 -117px;"></div>
+               <div style="width: 35px;height: 30px;margin-bottom: 10px;background-image: url(xuanfu.png);background-position: 0 -139px;"></div>
+               <div style="width: 35px;height: 30px;margin-bottom: 10px;background-image: url(xuanfu.png);background-position: 0 -164px;"></div>
+               <div style="width: 35px;height: 30px;margin-bottom: 10px;background-image: url(xuanfu.png);background-position: 0 -192px;"></div>
+                
+            
+            </div>
+</body>
+</html>
