@@ -80,7 +80,7 @@
         }
         .center-bottom-left{
             width: 160px;
-            height: 834px;
+            height: 280px;
             float: left;
             box-shadow: 0 2px 3px #a2a2a2;
         }
@@ -90,7 +90,7 @@
             margin: 10px;
             margin-left: 35px;
         }
-        dd{
+        li{
             font-size: 12px;
             margin: 7px;
             margin-left: 35px;
@@ -195,7 +195,7 @@
     </div>
     <div class="toutu">
         <div class="center-top">
-           <img src="yigou.png" style="margin-top:15px;">
+           <img src="pic/yigou.png" style="margin-top:15px;">
            <div class="center-top-right">
               <div style="width: 68px;height: 44px;">首页</div>
               <div style="width: 109px;height: 44px;">账户管理</div>
@@ -206,39 +206,18 @@
     <div style="width: 100%;height: 5px;box-shadow:0 2px 10px  #cac9c9;"></div>
     <div class="center-bottom">
         <div class="center-bottom-left">
-            <dl>
-                <dt>我的购物车</dt>
-                <dt>订单中心</dt>
-                <dd>我的订单</dd>
-                <dd>我的常购清单</dd>
-                <dd>我的回收订单</dd>
-                <dd>服务订单</dd>
-                <dt>我的资产</dt>
-                <dd>我的云钻</dd>
-                <dd>我的金融</dd>
-                <dd>我的优惠券</dd>
-                <dd>我的苏宁卡</dd>
-                <dd>我的任性付</dd>
-                <dd>我的红包</dd>
-                <dt>关注中心</dt>
-                <dd>我的关注</dd>
-                <dd>我的足迹</dd>
-                <dd>我的评价</dd>
-                <dd>我的抽奖</dd>
-                <dt>自助服务</dt>
-                <dd>退换/售后</dd>
-                <dd>服务收费公示</dd>
-                <dd>我要价保</dd>
-                <dd>交易纠纷</dd>
-                <dd>修改订单</dd>
-                <dd>服务自助预约</dd>
-                <dd>代客修</dd>
-                <dd>举报管理</dd>
-                <dd>我的服务套餐</dd>
-                <dd>我的发票</dd>
-                <dt>特色服务</dt>
-                <dd>我的预约</dd>
-            </dl>
+            <ul style="padding: 0;">
+                <dt>账户管理</dt>
+                <li>个人信息</li>
+                <li>安全设置</li>
+                <li>我的易付宝</li>
+                <li>地址管理</li>
+                <li>易付宝绑定设置</li>
+                <li>绑定管理</li>
+                <li>个人增票</li>
+                <li>股东会员认证</li>
+                <li>苏宁国际实名认证</li>               
+            </ul>
         </div>
         <div class="main">
            <div style="width: 1068px;height: 38px;background-color: rgb(250,250,250);float: left;">
@@ -254,16 +233,28 @@
              </div>
            </div>
            <div class="main-bottom">
-             <form>
+             <form style="font-size: 11px;color: #6a6a6a;">
                 <div style="width: 1069.6px;height: 26px;margin-bottom: 20px;">
-                    <label style="width: 194px;height: 26px;display: block;float: left;">昵称：</label>
+                    <label style="width: 194px;height: 26px;display: block;float: left;margin-left: 120px;">昵称：</label>
                 </div>
-                <div style="width: 1069.6px;height: 26px;margin-bottom: 20px;"></div>
-                <div style="width: 1069.6px;height: 26px;margin-bottom: 20px;"></div>
-                <div style="width: 1069.6px;height: 26px;margin-bottom: 20px;"></div>
-                <div style="width: 1069.6px;height: 31.6px;margin-bottom: 20px;"></div>
-
+                <div style="width: 1069.6px;height: 26px;margin-bottom: 20px;">
+                    <label style="width: 194px;height: 26px;display: block;float: left;margin-left: 120px;">性别：</label>
+                </div>
+                <div style="width: 1069.6px;height: 26px;margin-bottom: 20px;">
+                    <label style="width: 194px;height: 26px;display: block;float: left;margin-left: 120px;">手机：</label>
+                </div>
+                <div style="width: 1069.6px;height: 26px;margin-bottom: 20px;">
+                    <label style="width: 194px;height: 26px;display: block;float: left;margin-left: 120px;">邮箱：</label>
+                </div>
+                <div style="width: 1069.6px;height: 31.6px;margin-bottom: 20px;">
+                    <label style="width: 194px;height: 26px;display: block;float: left;margin-left: 120px;">出生日期：</label>
+                </div>
              </form>
+             <div style="margin-left: 180px;">
+                <button style="width: 77px;height: 30px;background-color: rgb(240,144,0);outline: none;border: 0;border-radius: 4px;color: white;">保 存</button>
+                <button style="margin-left: 50px;width: 77px;height: 30px;background-color: white;outline: none;border: 1px solid #8f8f8f;border-radius: 4px;">删 除</button>
+             </div>
+             
            </div>
         </div>
         
